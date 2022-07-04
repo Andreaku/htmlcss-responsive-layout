@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+:root{
+    --white: #FFF;
+    --black: rgb(0, 0, 0);
+    --grey: #b8b7b7;
+    --primary: #8e89dd;
+    --secondary: #0886fc;
+    --light-secondary: #a4d0f7;
+    --tertiary: #fab84e;
+}
+
+.debug .border {border: 2px dotted red ;}
+.debug .border .border {border: 2px dashed orange;}
+
+.container{
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.d-flex{display: flex;}
+
+.w-50 {width: 50%;}
+.w-100 {width: 100%;}
+
+.h-100 {height: 100%;}
+
+
+.p-20 {padding: 20px;}
+.p-30 {padding: 30px;}
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.py-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.my-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.t-center {text-align: center;}
+
+.c-white {color: var(--white);}
+.c-grey {color: var(--grey);}
+.c-black {color: var(--black);}
+.c-primary {color: var(--primary);}
+.c-secondary {color: var(--secondary);}
+.c-tertiary {color: var(--tertiary);}
+.bg-black {background-color: var(--black);}
+.bg-primary {background-color: var(--primary);}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-l, .btn-xl, .btn-primary, .btn-secondary {
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+}
+.btn-l {
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+.btn-xl {
+    padding: 20px 50px;
+    color: var(--primary);
+    border-radius: 30px;
+}
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+main a {text-decoration: none;}
+
+main {margin-top: 100px;}
+
+main section {margin: 50px 0;}
+
+h1 {font-size: 3.5rem;}
+h2 {font-size: 2.2rem;}
+h3 {font-size: 1.5rem;}
+h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+img {display: block;}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    height: 80px;
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+#navbar .d-flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#desktop-menu li {padding-left: 1rem;}
+#desktop-menu {display: none;}
+
+#get-app .row {margin: 0 -10px;}
+#get-app .col {padding: 10px;}
+
+#get-app .big-card {padding-bottom: 0;}
+
+#get-app .big-card .card-image {align-self: flex-end;}
+
+#get-app .card {
+    background-color: var(--light-secondary);
+    border-radius: 25px;
+}
+
+#get-app h2 {font-size: 1.5rem;}
+
+#get-app .card-content .btn {width: 85%;}
+
+#planning .app-dev-box {
+    background-color: var(--white);
+    border-radius: 30px;
+}
+
+#planning .btn-primary.fa-arrow-down-long {
+    padding: 20px 21.5px;
+    border-radius: 50%;
+    color: var(--black);
+}
+
+#testimonials .col div {border-radius: 50px;}
+
+#testimonials .card-image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: auto;
+}
+
+#testimonials .card span {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#benefits .row {margin: 0 -10px;}
+#benefits .col {padding: 10px;}
+
+#benefits .card {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 20px;
+}
+
+#benefits .card span {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+#about-us p {line-height: 2.6rem;}
+#about-us h2 {font-size: 2.8rem;}
+
+#about-us .card-image img {border-radius: 50%;}
+
+#about-us .card-image {
+    position: relative;
+    height: 180px;
+    width: 180px;
+}
+
+#about-us .card-image .fa-quote-left {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+#about-us h3 {font-size: 1.8rem;}
+#about-us .btn.btn-primary {
+    letter-spacing: normal;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 769px) {
+    #get-app .row {flex-direction: row;}
+
+    #get-app .row .col:first-child {max-width: calc(100% / 3 * 2);}
+    #get-app .card-image {width: 60%;}
+    #get-app .card-content .btn {width: 55%;}
+
+    #get-app .row .col {max-width: calc(100% / 3);}
+    
+    #planning h2 {font-size: 4rem;}
+
+    #testimonials .card {display: flex;justify-content: baseline;}
+    
+    #testimonials .card-content {
+        text-align: initial;
+        padding-left: 2rem;
+    }
+
+    #benefits .row {flex-direction: row;}
+    #benefits .col {width: calc(100% / 2);}
+
+    #about-us .row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #about-us .col:first-child {width: 60%;}
+    #about-us .col:last-child {width: 30%;}
+    
+    #about-us h2 {font-size: 4rem;}
+
+    #get-started .container {max-width: 60%;}
+    #get-started .row {align-items: center;}
+
+    #get-started h1 {font-size: 6rem;}
+    #get-started h2 {font-size: 2.5rem;}
+
+    #foot-info .container {max-width: 60%;}
+}
+
+@media screen and (min-width: 993px) {
+
+    .container {max-width: 80%;}
+
+
+    main {margin-top: 70px;}
+
+    #navbar {height: 50px;}
+    #desktop-menu {display: block;}
+    #mobile-menu {display: none;}
+
+    #get-app .big-card {display: flex;}
+
+    #get-app .big-card .card-content {width: 50%;}
+    #get-app .card-content .btn {width: 80%;}
+
+    #get-app .big-card .card-image {width: 50%;}
+
+    #planning .container {width: 60%;}
+    #planning .row {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #planning .col {width: 45%;}
+
+    #planning h2 {font-size: 2.2rem;}
+
+    #planning .col:last-child {align-self: flex-end;}
+    #planning .col:last-child img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    #benefits .col {max-width: calc(100% / 3);}
+
+    #get-started .container {max-width: 45%;}
+
+    #foot-info .container {max-width: 45%;}
+
+}
+
+@media screen and (min-width: 1201px) {
+
+    .container {max-width: 1150px;}
+
+    #planning .container {width: 50%;}
+
+    #get-started .container {max-width: 30%;}
+
+    #foot-info .container {max-width: 30%;}
+}
